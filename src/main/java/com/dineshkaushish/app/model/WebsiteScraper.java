@@ -5,5 +5,5 @@ package com.dineshkaushish.app.model;
  */
 public abstract class WebsiteScraper {
 
-    abstract public void scrapeWebsite();
+    abstract public String scrapeWebsite(String link);
 }
