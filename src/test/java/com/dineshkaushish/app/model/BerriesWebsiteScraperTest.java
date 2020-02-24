@@ -22,7 +22,7 @@ public class BerriesWebsiteScraperTest {
 
     @Test
     public void scrapeWebsiteTestSuccess(){
-        String result = berriesWebsiteScraper.scrapeWebsite(null);
+        String result = berriesWebsiteScraper.scrapeWebsite("https://jsainsburyplc.github.io/serverside-test/site/www.sainsburys.co.uk/webapp/wcs/stores/servlet/gb/groceries/berries-cherries-currants6039.html?language=Java");
         assertEquals("hello", result);
     }
 }
