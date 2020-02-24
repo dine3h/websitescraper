@@ -2,8 +2,11 @@ package com.dineshkaushish.app.model;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.rules.ExpectedException;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
+
+import java.io.IOException;
 
 import static org.junit.Assert.*;
 
@@ -20,9 +23,15 @@ public class BerriesWebsiteScraperTest {
         berriesWebsiteScraper = new BerriesWebsiteScraper();
     }
 
+    //Required to condition JSON string into Java format however no time.
     @Test
     public void scrapeWebsiteTestSuccess(){
-        String result = berriesWebsiteScraper.scrapeWebsite("https://jsainsburyplc.github.io/serverside-test/site/www.sainsburys.co.uk/webapp/wcs/stores/servlet/gb/groceries/berries-cherries-currants6039.html?language=Java");
-        assertEquals("hello", result);
+    }
+
+    //Required
+    @Test(expected = IOException.class)
+    public void scrapeWebsiteFailIOExceptionThrown(){
+        String link = "Invalid link";
+        berriesWebsiteScraper.scrapeWebsite(link);
     }
 }

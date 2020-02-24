@@ -22,6 +22,19 @@ run the automated tests.
 Execute the program
 `mvn exec:java -Dexec.mainClass=com.dineshkaushish.app.App`
 
+##Notes
+###Tests are not exhaustive but it has been recognised that with more time they could have been improved:
+1. Implementing tests for all possible scenarios
+2. Implementing verification calls using something like Mockito
+
+###Program could be further modularised by breaking up the scrape website class by two ways;
+
+1. Encapsulate details into other classes
+2. Use private methods which are terrible for testing independently.
+
+###Could not get omission of zero calories to work
+
+1. Some issue with Jackson, perhaps requires a rollback to an earlier version to rectify bug.
 
 Please note no input is required for the application. The expected output is JSON string in your console.
 

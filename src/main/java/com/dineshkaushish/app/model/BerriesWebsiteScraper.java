@@ -2,6 +2,7 @@ package com.dineshkaushish.app.model;
 
 import com.dineshkaushish.app.bean.Product;
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -28,7 +29,7 @@ public class BerriesWebsiteScraper extends WebsiteScraper {
     private String description;
     private String price;
 
-    @JsonInclude(JsonInclude.Include.NON_NULL)
+    @JsonInclude(Include.NON_NULL)
     private String nutritionalInfo;
     private String title;
     private List<Product> productList = new LinkedList<>();
